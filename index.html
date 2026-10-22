@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e91e83">
+<title>Waffle Empire — Digital Menu</title>
+<style>
+:root{--pink:#ec1683;--pink2:#ff6bb7;--pale:#fff0f8;--cream:#fffafc;--brown:#4b2438;--gold:#ffe17a;--line:#ffc1df}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(145deg,#fffafd,#ffe8f4);color:var(--brown);font-family:Arial,Helvetica,sans-serif}
+header{padding:18px 12px 16px;text-align:center;background:linear-gradient(115deg,#d90069,#f51b91 58%,#ff78bd);color:white;border-bottom:5px solid var(--gold)}
+h1{margin:0;font-size:clamp(1.7rem,5vw,2.8rem);font-weight:1000;letter-spacing:.06em;text-shadow:0 3px #a90052}
+header p{margin:6px 0 0;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:center;flex-wrap:wrap;gap:7px;padding:9px;background:#fffafd;border-bottom:1px solid var(--line)}
+nav a{padding:7px 11px;border-radius:999px;background:#ffe0f0;color:#a90052;text-decoration:none;font-size:.76rem;font-weight:800;border:1px solid #ffb2d6}
+main{max-width:1400px;margin:auto;padding:14px}
+.heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 1px 12px}
+.heading h2{margin:0;color:#c90065;font-size:1.15rem}
+.heading span{font-size:.75rem;color:#97677e;text-align:right}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.card{overflow:hidden;background:#fff;border:1px solid #ffadd4;border-radius:13px;box-shadow:0 5px 15px #9e165111;break-inside:avoid}
+.card h3{margin:0;padding:11px 12px;background:linear-gradient(110deg,#ffc4e0,#ff70b9);color:#6c1644;font-size:1rem;font-weight:950;border-bottom:2px solid var(--pink)}
+.card h3 small{display:block;margin-top:3px;font-size:.66rem;letter-spacing:.05em;color:#8c315d}
+ul{list-style:none;margin:0;padding:4px 11px 7px}
+li{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px dashed #f1c5dc}
+li:last-child{border-bottom:0}
+.item{font-size:.86rem;line-height:1.25;font-weight:700}
+.price{white-space:nowrap;flex-shrink:0;padding:4px 7px;border-radius:6px;background:#fff0a1;color:#55283e;font-size:.82rem;font-weight:950}
+.best li{padding:10px 0}
+.best .item{font-size:.9rem}
+.note{margin:13px 1px 0;color:#906579;text-align:center;font-size:.75rem}
+footer{text-align:center;background:#4b2438;color:#ffe5f2;padding:13px;font-size:.78rem;font-weight:800}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){main{padding:9px}.grid{grid-template-columns:1fr;gap:10px}.card h3{font-size:1.04rem;padding:12px 13px}ul{padding:5px 13px 8px}li{padding:9px 0}.item{font-size:.95rem}.price{font-size:.9rem;padding:5px 8px}.heading{align-items:flex-start;flex-direction:column;gap:4px}.heading span{text-align:left}nav a{font-size:.72rem;padding:6px 8px}}
+@media print{nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}header,footer,.card h3{print-color-adjust:exact}.card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+  <h1>WAFFLE EMPIRE 🧇</h1>
+  <p>Waffles · Chocolate · Sweet Cravings</p>
+</header>
+<nav aria-label="Menu sections">
+  <a href="#mini">Mini Popsicle</a><a href="#stick">Stick Waffle</a><a href="#belgian">Belgian Waffle</a><a href="#bowl">Bowl Cake</a><a href="#pizza">Pizza Waffle</a><a href="#best">Best Sellers</a>
+</nav>
+<main>
+  <div class="heading"><h2>OUR MENU ✨</h2><span>Clear prices · Easy to read on mobile</span></div>
+  <section class="grid" aria-label="Waffle Empire menu">
+    <article class="card" id="mini">
+      <h3>🍡 Mini Popsicle Waffle<small>All prices in Indian rupees</small></h3>
+      <ul>
+        <li><span class="item">Dark Chocolate</span><span class="price">₹50</span></li>
+        <li><span class="item">Dark &amp; Milk Chocolate</span><span class="price">₹50</span></li>
+        <li><span class="item">Dark &amp; White Chocolate</span><span class="price">₹50</span></li>
+        <li><span class="item">Triple Chocolate</span><span class="price">₹50</span></li>
+        <li><span class="item">Milky Bar</span><span class="price">₹60</span></li>
+        <li><span class="item">Nutella Madness</span><span class="price">₹60</span></li>
+        <li><span class="item">Dark Cookies</span><span class="price">₹60</span></li>
+        <li><span class="item">Kit Kat Delight</span><span class="price">₹70</span></li>
+        <li><span class="item">Blueberry</span><span class="price">₹70</span></li>
+      </ul>
+    </article>
+    <article class="card" id="stick">
+      <h3>🍫 Stick Waffle<small>Chocolate flavours</small></h3>
+      <ul>
+        <li><span class="item">Dark Chocolate</span><span class="price">₹100</span></li>
+        <li><span class="item">Dark &amp; Milk Chocolate</span><span class="price">₹100</span></li>
+        <li><span class="item">Dark &amp; White Chocolate</span><span class="price">₹100</span></li>
+        <li><span class="item">Triple Chocolate</span><span class="price">₹120</span></li>
+        <li><span class="item">Milky Bar</span><span class="price">₹130</span></li>
+        <li><span class="item">Nutella Madness</span><span class="price">₹130</span></li>
+        <li><span class="item">Dark Cookies</span><span class="price">₹130</span></li>
+        <li><span class="item">Kit Kat Delight</span><span class="price">₹150</span></li>
+        <li><span class="item">Blueberry</span><span class="price">₹150</span></li>
+      </ul>
+    </article>
+    <article class="card" id="belgian">
+      <h3>🧇 Belgian Waffle<small>Classic favourite</small></h3>
+      <ul>
+        <li><span class="item">Dark Chocolate</span><span class="price">₹100</span></li>
+        <li><span class="item">Dark &amp; Milk Chocolate</span><span class="price">₹100</span></li>
+        <li><span class="item">Dark &amp; White Chocolate</span><span class="price">₹100</span></li>
+        <li><span class="item">Triple Chocolate</span><span class="price">₹120</span></li>
+        <li><span class="item">Milky Bar</span><span class="price">₹130</span></li>
+        <li><span class="item">Nutella Madness</span><span class="price">₹130</span></li>
+        <li><span class="item">Dark Cookies</span><span class="price">₹130</span></li>
+        <li><span class="item">Kit Kat Delight</span><span class="price">₹150</span></li>
+        <li><span class="item">Blueberry</span><span class="price">₹150</span></li>
+      </ul>
+    </article>
+    <article class="card" id="bowl">
+      <h3>🍰 Bowl Cake<small>Rich chocolate dessert</small></h3>
+      <ul>
+        <li><span class="item">Dark Chocolate</span><span class="price">₹200</span></li>
+        <li><span class="item">Dark &amp; Milk Chocolate</span><span class="price">₹200</span></li>
+        <li><span class="item">Dark &amp; White Chocolate</span><span class="price">₹200</span></li>
+        <li><span class="item">Triple Chocolate</span><span class="price">₹230</span></li>
+        <li><span class="item">Milky Bar</span><span class="price">₹250</span></li>
+        <li><span class="item">Nutella Madness</span><span class="price">₹250</span></li>
+        <li><span class="item">Dark Cookies</span><span class="price">₹250</span></li>
+        <li><span class="item">Kit Kat Delight</span><span class="price">₹270</span></li>
+        <li><span class="item">Blueberry</span><span class="price">₹270</span></li>
+      </ul>
+    </article>
+    <article class="card" id="pizza">
+      <h3>🍕 Pizza Waffle<small>Loaded waffle dessert</small></h3>
+      <ul>
+        <li><span class="item">Dark Chocolate</span><span class="price">₹200</span></li>
+        <li><span class="item">Dark &amp; Milk Chocolate</span><span class="price">₹200</span></li>
+        <li><span class="item">Dark &amp; White Chocolate</span><span class="price">₹200</span></li>
+        <li><span class="item">Triple Chocolate</span><span class="price">₹230</span></li>
+        <li><span class="item">Milky Bar</span><span class="price">₹250</span></li>
+        <li><span class="item">Nutella Madness</span><span class="price">₹250</span></li>
+        <li><span class="item">Dark Cookies</span><span class="price">₹250</span></li>
+        <li><span class="item">Kit Kat Delight</span><span class="price">₹270</span></li>
+        <li><span class="item">Blueberry</span><span class="price">₹270</span></li>
+      </ul>
+    </article>
+    <article class="card best" id="best">
+      <h3>⭐ Best Sellers — Belgian Waffle<small>Popular picks from the original menu</small></h3>
+      <ul>
+        <li><span class="item">Triple Chocolate</span><span class="price">₹120</span></li>
+        <li><span class="item">Nutella Madness</span><span class="price">₹130</span></li>
+        <li><span class="item">Dark Cookies</span><span class="price">₹130</span></li>
+        <li><span class="item">Kit Kat Delight</span><span class="price">₹150</span></li>
+        <li><span class="item">Blueberry</span><span class="price">₹150</span></li>
+      </ul>
+    </article>
+  </section>
+  <p class="note">Menu prices transcribed from your supplied picture. Please verify before publishing.</p>
+</main>
+<footer>WAFFLE EMPIRE 🧇 · Thank you for choosing us 💗</footer>
+</body>
+</html>
